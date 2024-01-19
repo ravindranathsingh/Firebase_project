@@ -8,8 +8,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 
 interface CreateformData {
-  title: string,
-  description: string
+  title: string;
+  description: string;
 }
 
 export const Createform = () => {
@@ -24,10 +24,10 @@ export const Createform = () => {
     resolver: yupResolver(schema),
   });
 
-  const postsref = collection(db, "posts");
+  const repostRef = collection(db, "repost");
 
   const onCreatePost = async (data: any) => {
-    await addDoc(postsref, {
+    await addDoc(repostRef, {
       ...data,
       username: user?.displayName,
       userId: user?.uid

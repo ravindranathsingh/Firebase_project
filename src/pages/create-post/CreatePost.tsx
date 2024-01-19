@@ -3,7 +3,7 @@ import { Createform } from "./Createform"
 
 export const CreatePost = () => {
   return (
-    <div>
+    <div className="create-post">
         <Createform />
     </div>
   )
